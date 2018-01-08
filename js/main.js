@@ -1,21 +1,34 @@
 var user = {
-  nombre: 'Leonardo Quintana',
-  correo: 'leoquintanaa@gmail.com',
+	titulo : 'Tarjeta de presentacion',
+    nombre: 'Leonardo Quintana',
+    correo: 'leoquintanaa@gmail.com',
+    ciudad: 'Temuco',
+    ocupacion: 'Estudiante',
 }
+var card = document.getElementById('card');
 
-var card = document.createElement('div');
-var h2 = document.createElement('h2');
+var tittleText = document.createTextNode(user.titulo);
+var tittle = document.createElement('h2');
+tittle.appendChild(tittleText);
+
 var uno = document.createElement('p');
-var dos =  document.createElement('p');
-var tres = document.createElement('p');
-var cuatro = document.createElement('p');
-var h2Text = document.createTextNode('Tarjeta de presentacion');
-h2.appendChild(h2Text);
-var unoText = document.createTextNode('Nombre: Leonardo Quintana');
+var unoText = document.createTextNode('Nombre: ' + user.nombre);
 uno.appendChild(unoText);
-var dosText = document.createTextNode('Correo: leoquintanaa@gmail.com');
+
+var dos = document.createElement('p');
+var dosText = document.createTextNode('Correo: ' + user.correo);
 dos.appendChild(dosText);
-var tresText = document.createTextNode('Ciudad: Temuco');
-tres.appendChild(trestText);
-var cuatroText = document.createTextNode('Ocupacion: Estudiante');
+
+var tres = document.createElement('p');
+var tresText = document.createTextNode('Ciudad: ' + user.ciudad);
+tres.appendChild(tresText);
+
+var cuatro = document.createElement('p');
+var cuatroText = document.createTextNode('Ocupacion: ' + user.ocupacion);
 cuatro.appendChild(cuatroText);
+
+card.appendChild(tittle);
+card.appendChild(uno);
+card.appendChild(dos);
+card.appendChild(tres);
+card.appendChild(cuatro);
